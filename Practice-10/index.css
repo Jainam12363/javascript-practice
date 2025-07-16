@@ -1,0 +1,28 @@
+body {
+  display: block; /* <-- ensure default block flow */
+}
+
+.cardContainer{
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2; /* light gray */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  max-height: 400px;        /* allow more room */
+  overflow-y: auto;         /* scroll if it overflows */
+  display: block;
+  margin: 10px auto;
+  transition: all 0.3s ease; /* ✅ smooth transition */
+  cursor: default; /* default cursor */
+}
+
+.cardContainer:hover {
+  background-color: #0b1d4f; /* dark blue tech feel */
+  box-shadow: 0 0 20px 4px #ffff33; /* neon yellow glow */
+  color: #ffffff; /* optional: make text white for better contrast */
+  cursor: url('https://cdn-icons-png.flaticon.com/32/1402/1402297.png'), crosshair;
+  text-shadow: 0 0 10px #ffff33;
+}
