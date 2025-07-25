@@ -65,6 +65,22 @@ function updateScore(){
 	document.querySelector('.js-score').innerHTML=`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
 }
 
+let autoPlaying=false;
+let intervalID;
+function autoPlay(){
+	if(!autoPlaying){
+		intervalID= setInterval(()=>{
+			const playerMove= pickComputerMove();
+			playGame(playerMove);
+
+		},1000);
+		autoPlaying=true;
+	}else{
+		clearInterval(intervalID);
+		autoPlaying=false;
+	}
+}
+
 function pickComputerMove(){
 	const randomNumber=Math.random()
 	let computerMove=''
